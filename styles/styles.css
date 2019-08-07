@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 :root {
   --light-blue: #bbb8fa;
   --dark-blue: #070439;
@@ -12,7 +19,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   background-color: #f1f1f1;
 }
@@ -30,6 +37,10 @@ body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#605baf', endColorstr='#000370', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
+}
+
+.left .nav {
+  visibility: hidden;
 }
 
 .main-image {
@@ -64,25 +75,14 @@ body {
   color: var(--dark-blue);
 }
 
-/* .container {
+
+.container {
+  background-color: var(--grey);
+  width: 75vw;
   position: absolute;
   top: 50%;
   left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 70%;
-  padding: 0;
-  margin: auto;
-  -webkit-box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.25);
-} */
-
-.container {
-  /* margin: auto auto; */
-  margin: 10vh auto auto auto;
-  width: 70%;
+  transform: translate(-50%, -50%);
   -webkit-box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 8px 19px -9px rgba(0, 0, 0, 0.25);
@@ -92,22 +92,22 @@ body {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 45% 55%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.h1,
+#mobile-picture {
+  display: none;
+}
+
+h1,
 h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--dark-blue);
 }
 
+
 .heading {
   padding-top: 50px;
-}
-
-.body {
-  display: grid;
-  align-content: center;
 }
 
 .body-text {
@@ -140,7 +140,7 @@ h2 {
 .btn {
   display: flex;
   height: 3rem;
-  background-color: #06D79D;
+  background-color: #06d79d;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
@@ -158,6 +158,6 @@ h2 {
 .footer-text {
   display: flex;
   justify-self: right;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
